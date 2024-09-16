@@ -16,6 +16,6 @@ generate_and_push:
 	git config --local user.name "GitHub Action"
 	git add . MG_main_output.md
 	git commit -m "generate file"
-	git push origin main
+	git push origin main --force
 
 all: install format lint test generate_and_push
