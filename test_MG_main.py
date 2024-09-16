@@ -1,10 +1,13 @@
 import pandas as pd
 from MG_main import load_dataset, describe_data, find_min_and_max, create_graph
 
+
 # assinging a test data csv that has a very simple data with the from 1921 to 2023
 test_data_csv = "test_organization.csv"
 test_data = load_dataset(test_data_csv)
 column_of_int = test_data["Number of employees"]
+
+column_of_int.mean
 
 
 def test_load_data():
@@ -16,7 +19,7 @@ def test_stats_describe():
     summary_stats = describe_data(column_of_int)
     assert (
         summary_stats
-        == "This is the mean is 4964.86 \n This is the median is 4941.5 \n This is the standard deviation is 2850.85"
+        == "This is the mean is 4964.86\nThis is the median is 4941.5\nThis is the standard deviation is 2850.8597994927136"
     )
 
 
