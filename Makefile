@@ -14,7 +14,7 @@ generate_and_push:
 	python MG_main.py
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
-	git add .
+	git add .test.md
 	git commit -m "generate file"
 	git push
 
