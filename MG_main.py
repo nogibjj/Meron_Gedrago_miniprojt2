@@ -48,6 +48,6 @@ if __name__ == "__main__":
         & (loaded_data["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
     interested_column = data["ESTIMATE"]
-    describe_data(interested_column)
-    find_min_and_max(interested_column)
+    print(describe_data(interested_column))
+    print(find_min_and_max(interested_column))
     create_graph(data)
