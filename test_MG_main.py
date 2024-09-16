@@ -1,5 +1,5 @@
 import pandas as pd
-from MG_main import load_dataset, describe_data, find_min_and_max, create_graph
+from MG_main import load_dataset, describe_data, find_min_and_max
 
 
 # assinging a test data csv that has a very simple data with the from 1921 to 2023
