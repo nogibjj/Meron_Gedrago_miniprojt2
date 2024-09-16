@@ -11,7 +11,7 @@ lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 
 check: 
-	python main.py 
+	python MG_main.py 
 	git config --local user.email "action@github.com"; \
 	git config --local user.name "GitHub Action"; \
 	git add . 
