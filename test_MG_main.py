@@ -19,7 +19,7 @@ def test_stats_describe():
     summary_stats = describe_data(column_of_int)
     assert (
         summary_stats
-        == "This is the mean is 4964.86\nThis is the median is 4941.5\nThis is the standard deviation is 2850.8597994927136"
+        == "The mean is 4964.86; the median is 4941.5; the standard deviation is 2850.8597994927136"
     )
 
 
