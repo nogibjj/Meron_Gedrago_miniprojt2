@@ -37,15 +37,15 @@ def create_graph(data):
 
 
 if __name__ == "__main__":
-    our_data = load_dataset(
+    loaded_data = load_dataset(
         "https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD"
     )
     # furthering the cleaning this specific dataset
-    data = our_data[
-        (our_data["STUB_NAME"] == "Total")
-        & (our_data["AGE"] == "All ages")
-        & (our_data["PANEL"] == "All drug overdose deaths")
-        & (our_data["UNIT"] == "Deaths per 100,000 resident population, crude")
+    data = loaded_data[
+        (loaded_data["STUB_NAME"] == "Total")
+        & (loaded_data["AGE"] == "All ages")
+        & (loaded_data["PANEL"] == "All drug overdose deaths")
+        & (loaded_data["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
     describe_data(data)
     find_min_and_max(data)
