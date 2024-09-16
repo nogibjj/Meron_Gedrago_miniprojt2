@@ -2,9 +2,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# assigning the link of the dataset to a variable
-dataset = "https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD"
-
 
 # create a function to read the dataset and filter the
 def load_dataset(dataset):
@@ -53,7 +50,9 @@ def create_graph(data):
 
 
 if __name__ == "__main__":
-    data_set = load_dataset(dataset)
+    data_set = load_dataset(
+        "https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD"
+    )
     # furthering the cleaning this specific dataset
     data = data_set[
         (data_set["STUB_NAME"] == "Total")
@@ -61,9 +60,9 @@ if __name__ == "__main__":
         & (data_set["PANEL"] == "All drug overdose deaths")
         & (data_set["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
-    print(create_mean(data))
-    print(create_median(data))
-    print(create_std(data))
-    print(find_max(data))
-    print(find_min(data))
+    create_mean(data)
+    create_median(data)
+    create_std(data)
+    find_max(data)
+    find_min(data)
     # create_graph(data)
