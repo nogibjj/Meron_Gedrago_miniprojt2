@@ -1,2 +1,69 @@
-def multiply(x, y):
-    return x * y
+# import packages
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# assigning the link of the dataset to a variable
+dataset = "https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD"
+
+
+# create a function to read the dataset and filter the
+def load_dataset(dataset):
+    data_set = pd.read_csv(dataset)
+    return data_set
+
+
+# create a function to get the mean of the data
+def create_mean(data):
+    mean = data["ESTIMATE"].mean()
+    return f"This is the mean is {mean}"
+
+
+# create a function to get the median of the data
+def create_median(data):
+    median = data["ESTIMATE"].median()
+    return f"This is the median is {median}"
+
+
+# create a function to get the median of the data
+def create_std(data):
+    std = data["ESTIMATE"].std()
+    return f"This is the standard deviation is {std}"
+
+
+# create a function to get the median of the data
+def find_max(data):
+    max = data["ESTIMATE"].max()
+    return f"The max is {max}"
+
+
+# create a function to get the min of the data
+def find_min(data):
+    min = data["ESTIMATE"].min()
+    return f"The max is {min}"
+
+
+def create_graph(data):
+    # Create visualization
+    plt.scatter(data["YEAR"], data["ESTIMATE"])
+    plt.xlabel("Year")
+    plt.ylabel("Deaths per 100,000 resident population")
+    plt.title("Death rates from overdose over year")
+    plt.xticks(range(int(data["YEAR"].min()), int(data["YEAR"].max()), 2))
+    plt.show()
+
+
+if __name__ == "__main__":
+    data_set = load_dataset(dataset)
+    # furthering the cleaning this specific dataset
+    data = data_set[
+        (data_set["STUB_NAME"] == "Total")
+        & (data_set["AGE"] == "All ages")
+        & (data_set["PANEL"] == "All drug overdose deaths")
+        & (data_set["UNIT"] == "Deaths per 100,000 resident population, crude")
+    ]
+    print(create_mean(data))
+    print(create_median(data))
+    print(create_std(data))
+    print(find_max(data))
+    print(find_min(data))
+    # create_graph(data)

@@ -1,12 +1,15 @@
-from MG_main import multiply
+import pandas as pd
+from MG_main import load_dataset
+
+# assinging a test data csv that has a very simple data with the from 1921 to 2023
+test_data_csv = "test_organization.csv"
 
 
-def test_multiply():
-    """This is a function to test the multiplication function"""
-    assert multiply(3, 5) == 15
-    assert multiply(4, 6) == 24
-    assert multiply(0, 2) == 0
+def test_load_data():
+    # checking
+    test_data = load_dataset(test_data_csv)
+    assert test_data is not None
 
 
 if __name__ == "__main__":
-    test_multiply()
+    test_load_data()
