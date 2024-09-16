@@ -11,12 +11,14 @@ def test_load_data():
     assert test_data is not None
 
 
-def test_summary_stats():
-    summary_stats = describe_data()
-    range_stats = find_min_and_max()
+def test_summary_stats(input_data):
+    summary_stats = describe_data(input_data)
+    range_stats = find_min_and_max(input_data)
     assert summary_stats is not None
     assert range_stats is not None
 
 
 if __name__ == "__main__":
     test_load_data()
+    test_data = load_dataset(test_data_csv)
+    test_summary_stats(test_data)
