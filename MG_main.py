@@ -10,25 +10,25 @@ def load_dataset(dataset):
 
 
 # calculate and print the summary statistics
-def describe_data(data):
-    mean = data["ESTIMATE"].mean()
-    median = data["ESTIMATE"].median()
-    std = data["ESTIMATE"].std()
+def describe_data(input_data):
+    mean = input_data["ESTIMATE"].mean()
+    median = input_data["ESTIMATE"].median()
+    std = input_data["ESTIMATE"].std()
     print(f"This is the mean is {mean}")
     print(f"This is the median is {median}")
     print(f"This is the standard deviation is {std}")
 
 
 # create a function to get the median of the data
-def find_min_and_max(data):
-    data_max = data["ESTIMATE"].max()
-    data_min = data["ESTIMATE"].min()
+def find_min_and_max(input_data):
+    data_max = input_data["ESTIMATE"].max()
+    data_min = input_data["ESTIMATE"].min()
     print(f"The max is {data_max} and the min is {data_min}")
 
 
-def create_graph(data):
+def create_graph(input_data):
     # Create visualization
-    plt.scatter(data["YEAR"], data["ESTIMATE"])
+    plt.scatter(input_data["YEAR"], input_data["ESTIMATE"])
     plt.xlabel("Year")
     plt.ylabel("Deaths per 100,000 resident population")
     plt.title("Death rates from overdose over year")
