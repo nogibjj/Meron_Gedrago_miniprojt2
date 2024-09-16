@@ -15,7 +15,7 @@ generate_and_push:
 	git config --local user.email "action@github.com"
 	git config --local user.name "GitHub Action"
 	git add . MG_main_output.md
-	git commit --force
+	git commit --amend
 	git push origin main --force
 
 all: install format lint test generate_and_push
