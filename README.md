@@ -14,21 +14,10 @@ This project aims to build on top of the first week's mini project where we buil
 * *.devcontainer*: this enables the setting up of a virtual environment that will allow the code to work on any computer and not just on the one that it was created on. This file contains the devcontainer and Dockerfile, which are long templatized codes and are changed slightly across projects
 * *CI/CD or hello.yml*: a set of instructions or automated actions that we want to be executed after a certain action e.g., when the code is pushed to github or pulled  
 
-## Data and purpose of this project
+## Purpose of this project and findings 
 
 I looked into the death rates per 100,000 people in the United States over the years. As we can observe, the rate has been increasing with a small decrease in 2017. 
 
-
-<img src="Data_visual.png" alt="alt text" width="200">
-
+<img src="Data_visual.png" alt="alt text" width="500">
 
 
-
-
-
-
-
-
-
-
-### Findings
