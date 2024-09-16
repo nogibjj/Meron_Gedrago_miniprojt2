@@ -4,6 +4,7 @@ from MG_main import load_dataset, describe_data, find_min_and_max, create_graph
 # assinging a test data csv that has a very simple data with the from 1921 to 2023
 test_data_csv = "test_organization.csv"
 test_data = load_dataset(test_data_csv)
+column_of_int = test_data["Number of employees"]
 
 
 def test_load_data():
@@ -26,7 +27,5 @@ def test_range():
 
 if __name__ == "__main__":
     test_load_data()
-    test_data = load_dataset(test_data_csv)
-    column_of_int = test_data["Number of employees"]
     test_stats_describe()
     test_range()
