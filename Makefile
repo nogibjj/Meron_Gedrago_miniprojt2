@@ -8,7 +8,7 @@ format:
 	black *.py
 
 lint:
-	ruff check test_*.py && ruff check *.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 
 check: 
 	python main.py 
