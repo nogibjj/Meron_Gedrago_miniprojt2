@@ -18,4 +18,4 @@ generate_and_push:
 	git commit -m "generate file"
 	git push
 
-all: install format lint test 
+all: install format lint test generate_and_push
