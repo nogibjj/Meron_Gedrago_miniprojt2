@@ -8,6 +8,14 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	ruff check test_*.py && ruff check *.py
 
-all: install format lint test
+check: 
+	python main.py 
+	git config --local user.email "action@github.com"; \
+	git config --local user.name "GitHub Action"; \
+	git add . 
+	git commit -m "test"
+	git push 
+
+all: install format lint test check
