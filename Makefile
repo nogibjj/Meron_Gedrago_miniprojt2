@@ -10,12 +10,12 @@ format:
 lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 
-check: 
-	python MG_main.py 
-	git config user.email "action@github.com"; 
-	git config user.name "GitHub Action"; 
-	git add . 
-	git commit -m "test"
-	git push 
+generate_and_push: 
+	python MG_main.py
+	git config --local user.email "action@github.com"
+	git config --local user.name "GitHub Action"
+	git add .
+	git commit -m "generate file"
+	git push
 
-all: install format lint test check
+all: install format lint test 
