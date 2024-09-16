@@ -9,32 +9,24 @@ def load_dataset(dataset):
     return data_set
 
 
-# create a function to get the mean of the data
-def create_mean():
+# calculate and print the summary statistics
+def describe_data(data):
     mean = data["ESTIMATE"].mean()
-    return f"This is the mean is {mean}"
-
-
-# create a function to get the median of the data
-def create_median():
     median = data["ESTIMATE"].median()
-    return f"This is the median is {median}"
-
-
-# create a function to get the median of the data
-def create_std():
     std = data["ESTIMATE"].std()
-    return f"This is the standard deviation is {std}"
+    print(f"This is the mean is {mean}")
+    print(f"This is the median is {median}")
+    print(f"This is the standard deviation is {std}")
 
 
 # create a function to get the median of the data
-def find_min_and_max():
+def find_min_and_max(data):
     data_max = data["ESTIMATE"].max()
     data_min = data["ESTIMATE"].min()
-    return f"The max is {data_max} and the min is {data_min}"
+    print(f"The max is {data_max} and the min is {data_min}")
 
 
-def create_graph():
+def create_graph(data):
     # Create visualization
     plt.scatter(data["YEAR"], data["ESTIMATE"])
     plt.xlabel("Year")
@@ -55,8 +47,6 @@ if __name__ == "__main__":
         & (data["PANEL"] == "All drug overdose deaths")
         & (data["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
-    create_mean()
-    create_median()
-    create_std()
-    find_min_and_max()
-    create_graph()
+    describe_data(data)
+    find_min_and_max(data)
+    create_graph(data)
