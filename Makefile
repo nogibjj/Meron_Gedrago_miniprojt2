@@ -12,6 +12,8 @@ lint:
 
 check: 
 	python MG_main.py 
+	git config user.email "action@github.com"; 
+	git config user.name "GitHub Action"; 
 	git add . 
 	git commit -m "test"
 	git push 
