@@ -25,7 +25,7 @@ def test_stats_describe():
 
 def test_range():
     range_stats = find_min_and_max(column_of_int)
-    assert range_stats is not None
+    assert range_stats == "The max is 9995 and the min is 236"
 
 
 if __name__ == "__main__":

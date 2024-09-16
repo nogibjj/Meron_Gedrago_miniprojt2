@@ -23,7 +23,7 @@ def describe_data(input_data):
 def find_min_and_max(input_data):
     data_max = input_data.max()
     data_min = input_data.min()
-    print(f"The max is {data_max} and the min is {data_min}")
+    return f"The max is {data_max} and the min is {data_min}"
 
 
 def create_graph(input_data):
