@@ -1,4 +1,3 @@
-import pandas as pd
 from MG_main import load_dataset, describe_data, find_min_and_max
 
 
