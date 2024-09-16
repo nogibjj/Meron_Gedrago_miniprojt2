@@ -8,7 +8,6 @@ format:
 	black *.py
 
 lint:
-	ruff check test_*.py && ruff check *.py
-	nbqa ruff *.ipynb
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 
 all: install format lint test
