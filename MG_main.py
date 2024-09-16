@@ -29,9 +29,9 @@ def create_std():
 
 # create a function to get the median of the data
 def find_min_and_max():
-    max = data["ESTIMATE"].max()
-    min = data["ESTIMATE"].min()
-    return f"The max is {max} and the min is {min}"
+    data_max = data["ESTIMATE"].max()
+    data_min = data["ESTIMATE"].min()
+    return f"The max is {data_max} and the min is {data_min}"
 
 
 def create_graph():
