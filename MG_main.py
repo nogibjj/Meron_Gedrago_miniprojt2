@@ -28,15 +28,10 @@ def create_std():
 
 
 # create a function to get the median of the data
-def find_max():
+def find_min_and_max():
     max = data["ESTIMATE"].max()
-    return f"The max is {max}"
-
-
-# create a function to get the min of the data
-def find_min():
     min = data["ESTIMATE"].min()
-    return f"The max is {min}"
+    return f"The max is {max} and the min is {min}"
 
 
 def create_graph():
@@ -50,19 +45,18 @@ def create_graph():
 
 
 if __name__ == "__main__":
-    data_set = load_dataset(
+    data = load_dataset(
         "https://data.cdc.gov/api/views/95ax-ymtc/rows.csv?accessType=DOWNLOAD"
     )
     # furthering the cleaning this specific dataset
-    data = data_set[
-        (data_set["STUB_NAME"] == "Total")
-        & (data_set["AGE"] == "All ages")
-        & (data_set["PANEL"] == "All drug overdose deaths")
-        & (data_set["UNIT"] == "Deaths per 100,000 resident population, crude")
+    data = data[
+        (data["STUB_NAME"] == "Total")
+        & (data["AGE"] == "All ages")
+        & (data["PANEL"] == "All drug overdose deaths")
+        & (data["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
     create_mean()
     create_median()
     create_std()
-    find_max()
-    find_min()
-    # create_graph(data)
+    find_min_and_max()
+    create_graph()
