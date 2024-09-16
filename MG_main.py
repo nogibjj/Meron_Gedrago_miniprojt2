@@ -50,4 +50,4 @@ if __name__ == "__main__":
     interested_column = data["ESTIMATE"]
     describe_data(interested_column)
     find_min_and_max(interested_column)
-    create_graph(interested_column)
+    create_graph(data)
