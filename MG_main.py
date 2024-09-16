@@ -11,9 +11,9 @@ def load_dataset(dataset):
 
 # calculate and print the summary statistics
 def describe_data(input_data):
-    mean = input_data["ESTIMATE"].mean()
-    median = input_data["ESTIMATE"].median()
-    std = input_data["ESTIMATE"].std()
+    mean = input_data.mean()
+    median = input_data.median()
+    std = input_data.std()
     print(f"This is the mean is {mean}")
     print(f"This is the median is {median}")
     print(f"This is the standard deviation is {std}")
@@ -21,8 +21,8 @@ def describe_data(input_data):
 
 # create a function to get the median of the data
 def find_min_and_max(input_data):
-    data_max = input_data["ESTIMATE"].max()
-    data_min = input_data["ESTIMATE"].min()
+    data_max = input_data.max()
+    data_min = input_data.min()
     print(f"The max is {data_max} and the min is {data_min}")
 
 
@@ -47,6 +47,7 @@ if __name__ == "__main__":
         & (loaded_data["PANEL"] == "All drug overdose deaths")
         & (loaded_data["UNIT"] == "Deaths per 100,000 resident population, crude")
     ]
-    describe_data(data)
-    find_min_and_max(data)
-    create_graph(data)
+    interested_column = data["ESTIMATE"]
+    describe_data(interested_column)
+    find_min_and_max(interested_column)
+    create_graph(interested_column)
