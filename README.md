@@ -1,4 +1,5 @@
-# Meron_Gedrago_miniproject1
+[![CI](https://github.com/nogibjj/Meron_Gedrago_miniprojt2/actions/workflows/CI.yml/badge.svg)](https://github.com/nogibjj/Meron_Gedrago_miniprojt2/actions/workflows/CI.yml)
+# Meron_Gedrago_miniproject2
 
 Welcome to the second mini project for Data Engineering!
 
