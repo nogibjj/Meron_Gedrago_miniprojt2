@@ -12,10 +12,8 @@ lint:
 
 #generate_and_push: 
 #	python MG_main.py
-#	git config --local user.email "action@github.com"
-#	git config --local user.name "GitHub Action"
 #	git add . MG_main_output.md
-#	git commit --amend
-#	git push origin main --force
+#	git commit 
+#	git push 
 #
 all: install format lint test 
