@@ -24,12 +24,12 @@ The main focus of this project are in the following documents:
 
 * *README.md*: This is the document that you are reading right now that explains the purpose of the project as well as the analysis performed in MG_main.py and the findings from the analysis. 
 * *MG_main.py*: I created four functions in this file
-| - *load_dataset(dataset)*: loads and reads a csv file    
-| - *describe_data(data)*: inputs a column or row of interest and outputs the mean, median and standard deviation for the column/row or group 
-| - *find_min_and_max(data)*: input a column or row of interest and outputs the min and max of the column/row or group 
-| - *create_graph(data)*: creates a scatterplot from the data that has been given 
-| - *Data_visual.png*: a picture that has been generated from the *create_graph* function 
-| - *test_MG_main.py*: a series of functions that test if the functions from *MG_main.py* are working correctly using a random test dataset *test_organization.csv* 
+    1. *load_dataset(dataset)*: loads and reads a csv file    
+    2. *describe_data(data)*: inputs a column or row of interest and outputs the mean, median and standard deviation for the column/row or group
+    3. *find_min_and_max(data)*: input a column or row of interest and outputs the min and max of the column/row or group
+    4. *create_graph(data)*: creates a scatterplot from the data that has been given 
+* *Data_visual.png*: a picture that has been generated from the *create_graph* function 
+* *test_MG_main.py*: a series of functions that test if the functions from *MG_main.py* are working correctly using a random test dataset *test_organization.csv* 
 
 ## Purpose of this project and findings 
 
